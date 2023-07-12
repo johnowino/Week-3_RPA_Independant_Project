@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="762.6666666666666,6483.333333333333" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.ComponentModel;assembly=System.ComponentModel.TypeConverter" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="762.6666666666666,8561.333333333334" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.ComponentModel;assembly=System.ComponentModel.TypeConverter" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -38,6 +38,9 @@
       <x:String>System.Runtime.Serialization</x:String>
       <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
       <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>UiPath.Activities.System.Arrays</x:String>
+      <x:String>UiPath.Platform.Triggers</x:String>
+      <x:String>UiPath.Platform.Triggers.Scope</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -100,11 +103,11 @@
       <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="772.6666666666666,6418.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="772.6666666666666,8496.666666666666" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
-      <Variable x:TypeArguments="x:Int32" Name="employeeID">
+      <Variable x:TypeArguments="x:String" Name="employeeID">
         <Variable.Default>
-          <Literal x:TypeArguments="x:Int32" Value="1" />
+          <Literal x:TypeArguments="x:String">001</Literal>
         </Variable.Default>
       </Variable>
       <Variable x:TypeArguments="x:String" Default="john.doe@moringaschool.com" Name="officialEmailID" />
@@ -437,6 +440,123 @@
       </uix:NApplicationCard.Body>
       <uix:NApplicationCard.TargetApp>
         <uix:TargetApp Area="1912, -8, 1296, 1000" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAN7SURBVFhHxdZfSFNxFAfwOStKl2aJZjZKzUgcWam7d+slovAhC8tqD5X5kIYV6y8FViRE2R+K/mERJZYEUUR/Kcr0Tsv+URBRPpUviQQJkZD/Ur+d33WzeXd2t5XUhQ9sZ+d3zrl3270/Q86W3P+KDQYLtfYUKLZp3GfBYoOB4L4U1eeSDsIld6gUWzleSFFcbiBs0B/AEAZFXktNWwg0WnoVuRBlBiO31h82yIHLakO9/IJprPUS9TY7V4PDBr3hYba5T5Gr+11SH9PMDzW3GvXZZq6mNzYo4E5mBF3u3VSofWhxGf2KjK4aK/rd77trJPTVSUNy3Nqpxh68zozgeghsEC57Np3FJ6agSgzQemMOnlek4815Cz5fn4OeWnYAFQ3aLGpyvXwCAi0q0RbREkM48ydi1YJY9QpwORolXC+fgCCSNYt9NJ5JR5jBAAO5sDOZzdEY3gFuHZiuNhcOFpnZHI2/G4D+CXhXORMVW5PUyx4XM3JwANMYI3Jt41BebMaT0+n0lViHrHULfQDRtOZYGgpyqOG43w0DiRxtxBJ7DK7uS0XP48HfR2gD9NLfajEV4RqMHmXEgXVTsN2RgB2OSTi+KQXRpnA2V0ozoeOhekVCG6DzkRUJ433POjoyHA+OzAA+ngQ6vwDdbUDrXbw6Z0HCBN/88VEj8O1e1p99BU2XMrBuURzmWsZi3qwobFwar8bEZ9tWJmBvYTL2F02Dc3kiftBZivtB6epE+j3EYGFWNDbkxeND1UD+Hw2gp7ZiPk44U1G+PglXymbTjWgum+dleAdAWyPQRZe/6yvQ0QI8XcDn/Ta8A7yvmonDJSk4uTkNby8OXmY9IQzQYMujBT81BYYQt+LKXck45ZyKnzrPAZUi98JlW8r18gl49NRZM+iBVMsWDE0dqBbXQ2CDHuoOqEHKpyIfNUWDQE9TRVouanC1Pdiglro3cMml9Fj12RswxB5gt94ewBsb9AfPbIl0Zpdpa+a7OxqIVdNZT+bW+sMGA+lRJJkGeeY1wHNqLHO5gbDBYABlRhpiDW1AC3BtRTiXEww2qIeOVFLjVkUs5Kb7vYNbo4cN6qHDSsSD5iwpJIdIs/u1hVujhw3qocMzQBPJJ0fJUy43GGxQDx2eAe6RM2QP+U5uk2XcGj1sUA8dsaTYzUFMZLX7vd87nj9s8N/JNfwClv+GPQkjCbMAAAAASUVORK5CYII=" InformativeScreenshot="e0fb7316bacb9a54c66b2604e7df1c23.jpg" Selector="&lt;html app='chrome.exe' title='HR On-Boarding Process Form - ExcelCult' /&gt;" Title="HR On-Boarding Process Form - ExcelCult" Url="https://excelcult.com/hr-on-boarding-process-form/" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: Untitled - Notepad" sap:VirtualizedContainerService.HintSize="710.6666666666666,2038" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" ScopeGuid="485e17f6-653b-46a7-bd8f-7e41121e41b4" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,1740.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_11">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:GetEnvironmentVariable VariableValue="{x:Null}" DisplayName="Get Environment Variable" sap:VirtualizedContainerService.HintSize="388,82" sap2010:WorkflowViewState.IdRef="GetEnvironmentVariable_1" Variable="[employeeID.ToString]" />
+            <ui:SetToClipboard DisplayName="Set To Clipboard" sap:VirtualizedContainerService.HintSize="388,60" sap2010:WorkflowViewState.IdRef="SetToClipboard_1" Text="[employeeID.ToString]" />
+            <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SpecialKey="{x:Null}" Activate="True" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="388,139.33333333333334" sap2010:WorkflowViewState.IdRef="SendHotkey_1" Key="v" KeyModifiers="Ctrl">
+              <ui:SendHotkey.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="1166170e-d362-4f77-9f97-77d5d81fcf20">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SendHotkey.Target>
+            </ui:SendHotkey>
+            <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="388,139.33333333333334" sap2010:WorkflowViewState.IdRef="SendHotkey_2" Key="enter" KeyModifiers="None" SpecialKey="True">
+              <ui:SendHotkey.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="018cff93-e48b-47d2-963e-2834b5787630">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SendHotkey.Target>
+            </ui:SendHotkey>
+            <ui:GetEnvironmentVariable VariableValue="{x:Null}" DisplayName="Get Environment Variable" sap:VirtualizedContainerService.HintSize="388,82" sap2010:WorkflowViewState.IdRef="GetEnvironmentVariable_2" Variable="[officialEmailID]" />
+            <ui:SetToClipboard DisplayName="Set To Clipboard" sap:VirtualizedContainerService.HintSize="388,60" sap2010:WorkflowViewState.IdRef="SetToClipboard_2" Text="[officialEmailID]" />
+            <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SpecialKey="{x:Null}" Activate="True" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="388,139.33333333333334" sap2010:WorkflowViewState.IdRef="SendHotkey_3" Key="v" KeyModifiers="Ctrl">
+              <ui:SendHotkey.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="52e4a93d-2bdd-4be6-bd91-86684d46ceac">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SendHotkey.Target>
+            </ui:SendHotkey>
+            <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="388,139.33333333333334" sap2010:WorkflowViewState.IdRef="SendHotkey_4" Key="enter" KeyModifiers="None" SpecialKey="True">
+              <ui:SendHotkey.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="4aae43c6-1202-404a-98b6-a670c8cafad4">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SendHotkey.Target>
+            </ui:SendHotkey>
+            <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SpecialKey="{x:Null}" Activate="True" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="388,139.33333333333334" sap2010:WorkflowViewState.IdRef="SendHotkey_5" Key="s" KeyModifiers="Ctrl, Shift">
+              <ui:SendHotkey.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="d320b48b-bca0-4533-8bc0-ad9c7ca11727">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SendHotkey.Target>
+            </ui:SendHotkey>
+            <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SpecialKey="{x:Null}" Activate="True" DisplayName="Send Hotkey 'Edit'" sap:VirtualizedContainerService.HintSize="388,139.33333333333334" sap2010:WorkflowViewState.IdRef="SendHotkey_6" Key="v" KeyModifiers="Ctrl">
+              <ui:SendHotkey.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="4bf79417-2d46-4d15-9913-56e0d14cd285" Selector="&lt;wnd app='notepad.exe' cls='#32770' title='Save As' /&gt;&lt;wnd aaname='Explorer Pane' cls='DirectUIHWND' /&gt;&lt;wnd aaname='File name:' cls='ComboBox' /&gt;&lt;wnd ctrlid='1001' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SendHotkey.Target>
+            </ui:SendHotkey>
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'Edit'" sap:VirtualizedContainerService.HintSize="388,107.33333333333333" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="854065dc-d7e4-4574-b285-61563bb7a0ef" InformativeScreenshot="2175b649736428d58192e0e5bf44102a" Selector="&lt;wnd app='notepad.exe' cls='#32770' title='Save As' /&gt;&lt;wnd ctrlid='1' title='&amp;amp;Save' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:Click.Target>
+            </ui:Click>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="285, 79, 1205, 492" FilePath="C:\Windows\System32\notepad.exe" IconBase64="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" InformativeScreenshot="c4efc68033ed7cbdf52772770365eb3a.png" Selector="&lt;wnd app='notepad.exe' cls='Notepad' title='Untitled - Notepad' /&gt;" Title="Untitled - Notepad" />
       </uix:NApplicationCard.TargetApp>
     </uix:NApplicationCard>
   </Sequence>
