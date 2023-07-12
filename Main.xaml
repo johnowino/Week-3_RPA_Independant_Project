@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="762.6666666666666,5710" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.ComponentModel;assembly=System.ComponentModel.TypeConverter" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="762.6666666666666,6483.333333333333" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.ComponentModel;assembly=System.ComponentModel.TypeConverter" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -37,6 +37,7 @@
       <x:String>UiPath.UIAutomationNext.Contracts</x:String>
       <x:String>System.Runtime.Serialization</x:String>
       <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -99,14 +100,14 @@
       <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="772.6666666666666,5645.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="772.6666666666666,6418.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Int32" Name="employeeID">
         <Variable.Default>
           <Literal x:TypeArguments="x:Int32" Value="1" />
         </Variable.Default>
       </Variable>
-      <Variable x:TypeArguments="x:String" Default="john.doe@moringaschool.com" Name="official_Email_ID" />
+      <Variable x:TypeArguments="x:String" Default="john.doe@moringaschool.com" Name="officialEmailID" />
       <Variable x:TypeArguments="x:String" Default="John" Name="firstName" />
       <Variable x:TypeArguments="x:String" Default="Doe" Name="lastName" />
       <Variable x:TypeArguments="x:Int32" Name="dateOfBirth">
@@ -131,13 +132,13 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: HR On-Boarding Process Form - ExcelCult" sap:VirtualizedContainerService.HintSize="710.6666666666666,5534.666666666667" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="7d399e36-7b4f-400d-b529-3910685c2deb" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: HR On-Boarding Process Form - ExcelCult" sap:VirtualizedContainerService.HintSize="710.6666666666666,6308" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="7d399e36-7b4f-400d-b529-3910685c2deb" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="676.6666666666666,5315.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="676.6666666666666,6088.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -406,6 +407,30 @@
                 </sc:BindingList>
               </ui:IfElseIf.ConditionBlocks>
             </ui:IfElseIf>
+            <uix:NGetText DisplayName="Get Text 'Employee Id*'" sap:VirtualizedContainerService.HintSize="614.6666666666666,159.33333333333334" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="7d399e36-7b4f-400d-b529-3910685c2deb" TextString="[employeeID]" Version="V3">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="https://excelcult.com/hr-on-boarding-process-form/" CvType="InputBox" DesignTimeRectangle="668, 293, 290, 45" DesignTimeScaleFactor="1.5" ElementType="InputBox" FriendlyName="'1012'" FullSelectorArgument="&lt;webctrl id='EmployeeId' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='EmployeeId' tag='INPUT' type='text' class='' aaname='' /&gt;" Guid="672fd9e1-ac6d-4897-b1ed-5597261eae49" InformativeScreenshot="2f60e0e6aef940717513adffcd767be9.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='HR On-Boarding Process Form - ExcelCult' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target CvTextArgument="Employee Id*" CvType="Text" DesignTimeRectangle="475, 298, 194, 34" ElementType="Text" FriendlyName="'Employee Id*'" FullSelectorArgument="&lt;webctrl tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='LABEL' type='' class='' aaname='Employee Id*' check:innerText='Employee Id*' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAMYAAAAmCAYAAACf3+TfAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAVISURBVHhe7ZrBa+JKGMDfXyuFUAhFKPVQH4RC6KGHUAiFUiqFXlxYF/SwFtbH0qW4By/CevIi1H3isuBBWAT53jfJN2YSv3FN3VZf+/0g2E4mM+M385tkJv4FgiBE/PtjQn8BiBiCQIgYgsAgYggCg4ghCAwihiAwiBiCwCBiCAKDiCEIDCKGIDCIGP9nOiEUCgUo14eU8HbpXBQwFmVofKeEDRExGIb1cjTgVh8hdCj/1ni1YgyhcaxivP5AXylGFKd80ogYDFoM1wvg8urScrRgQPm3hoixQMR4AbQYOz/gRIwFWTGG/+DkVe/AYDqjOHnQGAHMHnvQfHcJrd/MaiIGg4ixbTYVYwr3oQsOxkbFx9l38NPBz/j/guOC/3F1zEQMhrxixJ3iQ+uxD80LD1yHOmC/BEG9j92EM9WoDZUTo7OOfLj9Oo4L0HxvQJnqHX+9Bf9IdSjm33OgFDSgl/RVjFWMGYwfjOt1fQ9jPJPQvXajc95dtmBLDOYT6N2F4B0Y7Tq9hfbILJXIk3eJFWJMVYzL4OwZ3wvj2OYepeYYh34DzkgI97wF/dE0FQMbIgbD08TAAzvLOfQhxDVIeFpadJ5/UwEvda5IgrhQ+UaFKEgMVU48kEJcywTJ4DrABb+yTMOKMYXOVTHOv1+GIFoPBVCmwVG86kSiRgyqUFL5TpqQVkMPTA+aPylpjmkncTucv2ntFdAA3cPHlEfKp8iTl8UixrQD4YFKZ2IZxXpZpGHdi+oMz0tr1h0jYjBoMexHekdKi1G67iWDDpl1K+DSNeX3g9RMNf0SxGVdGCVpMdwA7n9QmgJn3/ZFPLu7111KRBgxZpgW1ek1YDinRMVsADUvbkvwoFsygOqRSssMKN0OQ5g4Ji4EnzN3ucfaRnl5eDF6NxQDjFkqzoNaNPFk808pFuUPGJ95DypKquNaOi4WRAwGLYZ9Vyq9I5Vd+CVgZ7jqHA70X5SkmbTAV4PkGAcwJS0GpCmL5tc9BOqcW8FSiSUxJtA6VfWVoMotLvUd4rS1GJiTO5xRU2Ukaf4nnYu+x2EV+pSSMIP7QNWpv2OevDY4MajcvQDazLXLfTCDwcczcE0RvuFEdXAGzcHvH6ZEDIanPUpxYugO5t554GOBGqTrirEoK95diVgSg8o05UnRh+phpj0/m+Cpa46qJPsEmif4vzkAdbtWHvT98+S1woihyzXjZWDtg+zdYY27hULEYNhNMWbQPs/UYxPDMnj49uhZnO4yWpTzNp4hdLtwocvfQdVRg64aS3nyWlkhBhubVX3wNEQMhtd7x9CPdun2zB7i9U7p3QAmn/zo79DMoNtlPIJZyZPXCiPGqBELi2unzMolQsR4AXZSjGdaY0TMsS1q8XqEs7m6Huvomo8c+ry5S2UjT14rjBi51xibIWIwbF2MgxDaqZE7xTpoR+bGuBcsiZHM/ku7UmoLdWlXKkG/04jqMHe+iMWO0Gkzs6uDi9wPZ3B2l+y65cnLw4lhlIsTxzq7UpsgYjBoMdb9rdQfF0N18l4R/DCuKzh+pvcYJv0qFNU1hSJUl7eTUmIl5YbgH8ZtS5WbJy8LL8ZT3mM8FRGDQYux+kgG+59/lGrD+KECXpGEeKY332lox2qxO8WQfZtdcMA9tpSbJ+8SFjEUljff3ehuImK8TlatMZ4b2o1SC3BBxNgttiaGXsNssmB+XYgYu8RLizHpQs34LVZqYf/GETF2iZcWY4SPT9FC34HyNa5r1nwr/BYQMQSBQcQQBAYRQxAYRAxBYBAxBIFBxBAEBhFDEBhEDEFgSMQA+A/S7jlUJW9LewAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <uix:NGetText DisplayName="Get Text 'Official Mail Id*'" sap:VirtualizedContainerService.HintSize="614.6666666666666,159.33333333333334" sap2010:WorkflowViewState.IdRef="NGetText_2" ScopeIdentifier="7d399e36-7b4f-400d-b529-3910685c2deb" TextString="[officialEmailID]" Version="V3">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="https://excelcult.com/hr-on-boarding-process-form/" CvElementArea="1146, 290, 299, 50" CvTextArea="1155, 303, 283, 24" CvTextArgument="Laurah.Mbanda@excelcult.co" CvType="InputBox" DesignTimeRectangle="1152, 293, 290, 45" DesignTimeScaleFactor="1.5" ElementType="InputBox" FriendlyName="'Laurah.Mbanda@excelcult…'" FullSelectorArgument="&lt;webctrl id='EmployeeEmail' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='EmployeeEmail' tag='INPUT' type='text' class='' aaname='' /&gt;" Guid="2fdb29d8-1dd2-4219-abdb-0384a3afb7e6" InformativeScreenshot="b1c593bcffe25bdc28847012f42b2e6b.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='HR On-Boarding Process Form - ExcelCult' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target CvTextArgument="Official Mail Id*" CvType="Text" DesignTimeRectangle="959, 298, 194, 34" ElementType="Text" FriendlyName="'Official Mail Id*'" FullSelectorArgument="&lt;webctrl aaname='Official Mail Id*' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Official Mail Id*' tag='LABEL' type='' class='' check:innerText='Official Mail Id*' /&gt;" ImageBase64="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" SearchSteps="FuzzySelector, Image, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="614.6666666666666,147.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_8" Message="[employeeID]" />
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="614.6666666666666,147.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_9" Message="[officialEmailID]" />
             <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="614.6666666666666,147.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_7" Message="[&quot;Some data has been filled onto the portal. Pending gender, accepting T&amp;C and submittion&quot;]" />
           </Sequence>
         </ActivityAction>
