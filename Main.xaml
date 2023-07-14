@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="649.3333333333334,8986.666666666666" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.ComponentModel;assembly=System.ComponentModel.TypeConverter" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="649.3333333333334,9818.666666666666" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.ComponentModel;assembly=System.ComponentModel.TypeConverter" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -110,7 +110,7 @@
       <AssemblyReference>UiPath.CV.Activities</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="659.3333333333334,8922" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="659.3333333333334,9754" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Default="001" Name="employeeID" />
       <Variable x:TypeArguments="x:String" Default="john.doe@moringaschool.com" Name="officialEmailID" />
@@ -126,19 +126,19 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: HR On-Boarding Process Form - ExcelCult" sap:VirtualizedContainerService.HintSize="597.3333333333334,6290" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="7d399e36-7b4f-400d-b529-3910685c2deb" Version="V2">
+    <uix:NApplicationCard sap2010:Annotation.AnnotationText="Use Chrome Browser to open staff portal for transactions" AttachMode="ByInstance" DisplayName="Use Browser Chrome: HR On-Boarding Process Form - ExcelCult" sap:VirtualizedContainerService.HintSize="597.3333333333334,7200.666666666667" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="7d399e36-7b4f-400d-b529-3910685c2deb" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="563.3333333333334,6070.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="563.3333333333334,6950.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'push button  Reload'" sap:VirtualizedContainerService.HintSize="501.3333333333333,107.33333333333333" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT">
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" sap2010:Annotation.AnnotationText="Refresh the web portal to ensure historical records do not affect new data entry and capture" ClickType="CLICK_SINGLE" DisplayName="Click 'push button  Reload'" sap:VirtualizedContainerService.HintSize="501.3333333333333,152.66666666666666" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT">
               <ui:Click.CursorPosition>
                 <ui:CursorPosition Position="Center">
                   <ui:CursorPosition.OffsetX>
@@ -159,39 +159,80 @@
                   </ui:Target.WaitForReady>
                 </ui:Target>
               </ui:Click.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
             </ui:Click>
-            <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="501.3333333333333,246" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="First Name" Title="Enter your first name">
+            <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" sap2010:Annotation.AnnotationText="Allows the user to type in their first name&#xD;&#xA;" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="501.3333333333333,291.3333333333333" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="First Name" Title="Enter your first name">
               <ui:InputDialog.Result>
                 <OutArgument x:TypeArguments="x:String">[firstName]</OutArgument>
               </ui:InputDialog.Result>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
             </ui:InputDialog>
-            <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="501.3333333333333,246" sap2010:WorkflowViewState.IdRef="InputDialog_2" IsPassword="False" Label="Last Name" Title="Enter your last name">
+            <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" sap2010:Annotation.AnnotationText="Allows the user to type in their last name" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="501.3333333333333,276.6666666666667" sap2010:WorkflowViewState.IdRef="InputDialog_2" IsPassword="False" Label="Last Name" Title="Enter your last name">
               <ui:InputDialog.Result>
                 <OutArgument x:TypeArguments="x:String">[lastName]</OutArgument>
               </ui:InputDialog.Result>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
             </ui:InputDialog>
-            <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="501.3333333333333,246" sap2010:WorkflowViewState.IdRef="InputDialog_3" IsPassword="False" Label="Date of Birth" Title="Date of Birth">
+            <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" sap2010:Annotation.AnnotationText="Allows the user to type in their date of birth. Format should be DDMMYYYY" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="501.3333333333333,291.3333333333333" sap2010:WorkflowViewState.IdRef="InputDialog_3" IsPassword="False" Label="Date of Birth using numbers....DDMMYYYY" Title="Date of Birth">
               <ui:InputDialog.Result>
                 <OutArgument x:TypeArguments="x:Int32">[dateOfBirth]</OutArgument>
               </ui:InputDialog.Result>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
             </ui:InputDialog>
-            <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="501.3333333333333,246" sap2010:WorkflowViewState.IdRef="InputDialog_4" IsPassword="False" Label="Designation" Title="Designation">
+            <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" sap2010:Annotation.AnnotationText="Allows the user to type in their Designation" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="501.3333333333333,276.6666666666667" sap2010:WorkflowViewState.IdRef="InputDialog_4" IsPassword="False" Label="Designation" Title="Designation">
               <ui:InputDialog.Result>
                 <OutArgument x:TypeArguments="x:String">[designation]</OutArgument>
               </ui:InputDialog.Result>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
             </ui:InputDialog>
-            <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="501.3333333333333,246" sap2010:WorkflowViewState.IdRef="InputDialog_5" IsPassword="False" Label="Your  Mobile Number" Title="Mobile Number">
+            <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" sap2010:Annotation.AnnotationText="Allows the user to type in their mobile number" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="501.3333333333333,276.6666666666667" sap2010:WorkflowViewState.IdRef="InputDialog_5" IsPassword="False" Label="Your  Mobile Number .... 07XXXXXXXX" Title="Mobile Number">
               <ui:InputDialog.Result>
                 <OutArgument x:TypeArguments="x:Int32">[mobileNumber]</OutArgument>
               </ui:InputDialog.Result>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
             </ui:InputDialog>
-            <ui:InputDialog Options="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="501.3333333333333,300.6666666666667" sap2010:WorkflowViewState.IdRef="InputDialog_6" IsPassword="False" Label="Select Your Gender" OptionsString="Male;Female" Title="Your Gender">
+            <ui:InputDialog Options="{x:Null}" sap2010:Annotation.AnnotationText="Allows the user to select  their gender from buttons" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="501.3333333333333,331.3333333333333" sap2010:WorkflowViewState.IdRef="InputDialog_6" IsPassword="False" Label="Select Your Gender" OptionsString="Male;Female" Title="Your Gender">
               <ui:InputDialog.Result>
                 <OutArgument x:TypeArguments="x:String">[gender]</OutArgument>
               </ui:InputDialog.Result>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
             </ui:InputDialog>
-            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="501.3333333333333,147.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;Employee data has been captured into the variables&quot;]" />
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'First Name*'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="501.3333333333333,222.66666666666666" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="7d399e36-7b4f-400d-b529-3910685c2deb" Text="[firstName]" Version="V3">
+            <ui:LogMessage sap2010:Annotation.AnnotationText="To track that the process on data capture as progressed to this point of the workflow" DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="501.3333333333333,192.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;Employee data has been captured into the variables&quot;]">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:LogMessage>
+            <uix:NTypeInto ActivateBefore="True" sap2010:Annotation.AnnotationText="The robot gets the first name from variable firstName and pastes it onto the portal" ClickBeforeMode="Single" DisplayName="Type Into 'First Name*'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="501.3333333333333,268" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="7d399e36-7b4f-400d-b529-3910685c2deb" Text="[firstName]" Version="V3">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable BrowserURL="https://excelcult.com/hr-on-boarding-process-form/" CvType="InputBox" DesignTimeRectangle="668, 876, 290, 45" DesignTimeScaleFactor="1.5" ElementType="InputBox" FriendlyName="'INPUT fname'" FullSelectorArgument="&lt;webctrl id='fname' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='fname' tag='INPUT' type='text' class='' aaname='' /&gt;" Guid="95557c72-4167-4a33-81f6-256bbc32f615" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAASYAAAAxCAYAAAB3YARNAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAADKSURBVHhe7dSxCYAwAABB95/UwsYJImkCAft8cQe/wl8DIMaYgJw1pvt5Jel40zYmgJOMCcgxJiDHmIAcYwJyjAnIMSYgx5iAHGMCcowJyDEmIMeYgBxjAnKMCcgxJiDHmIAcYwJyjAnIMSYgx5iAHGMCcowJyDEmIMeYgBxjAnKMCcgxJiDHmIAcYwJyjAnIMSYgx5iAHGMCcowJyDEmIMeYgBxjAnKMCcgxJiDHmIAcYwJyjAnI+R2TJJ1uWmMCqDAmIMeYgJgxPkCmskqC7oB+AAAAAElFTkSuQmCC" InformativeScreenshot="210783c7cab446473b86447b7502635a.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='HR On-Boarding Process Form - ExcelCult' /&gt;" SearchSteps="FuzzySelector, Image, CV" Version="V2" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
@@ -201,8 +242,13 @@
                   </uix:TargetAnchorable.Anchors>
                 </uix:TargetAnchorable>
               </uix:NTypeInto.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
             </uix:NTypeInto>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Last Name*'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="501.3333333333333,222.66666666666666" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="7d399e36-7b4f-400d-b529-3910685c2deb" Text="[lastName]" Version="V3">
+            <uix:NTypeInto ActivateBefore="True" sap2010:Annotation.AnnotationText="The robot gets the last name from variable lastName and pastes it onto the portal" ClickBeforeMode="Single" DisplayName="Type Into 'Last Name*'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="501.3333333333333,268" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="7d399e36-7b4f-400d-b529-3910685c2deb" Text="[lastName]" Version="V3">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable BrowserURL="https://excelcult.com/hr-on-boarding-process-form/" CvType="InputBox" DesignTimeRectangle="1152, 876, 290, 45" DesignTimeScaleFactor="1.5" ElementType="InputBox" FriendlyName="'INPUT lname'" FullSelectorArgument="&lt;webctrl id='lname' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='lname' tag='INPUT' type='text' class='' aaname='' /&gt;" Guid="875e80df-3d5b-4198-8250-2abb56de32f1" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAASYAAAAxCAYAAAB3YARNAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAADKSURBVHhe7dShDYAwAABB9p8UgWGCotqkAt0Xd8mv8NcAiDEmIGeN6X5eSTratI0J4BRjAnKMCcgxJiDHmIAcYwJyjAnIMSYgx5iAHGMCcowJyDEmIMeYgBxjAnKMCcgxJiDHmIAcYwJyjAnIMSYgx5iAHGMCcowJyDEmIMeYgBxjAnKMCcgxJiDHmIAcYwJyjAnIMSYgx5iAHGMCcowJyDEmIMeYgBxjAnKMCcgxJiDHmIAcYwJyfsckSSeb1pgAKowJyDEmIGaMD2nfsroE98LwAAAAAElFTkSuQmCC" InformativeScreenshot="30624693dab9b8c21d19f8a822d212f9.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='HR On-Boarding Process Form - ExcelCult' /&gt;" SearchSteps="FuzzySelector, Image, CV" Version="V2" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
@@ -212,8 +258,13 @@
                   </uix:TargetAnchorable.Anchors>
                 </uix:TargetAnchorable>
               </uix:NTypeInto.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
             </uix:NTypeInto>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'DOB*'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="501.3333333333333,222.66666666666666" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="7d399e36-7b4f-400d-b529-3910685c2deb" Text="[dateOfBirth.ToString]" Version="V3">
+            <uix:NTypeInto ActivateBefore="True" sap2010:Annotation.AnnotationText="The robot gets the Date of Birth name from variable dateOfBirth and pastes it onto the portal" ClickBeforeMode="Single" DisplayName="Type Into 'DOB*'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="501.3333333333333,268" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="7d399e36-7b4f-400d-b529-3910685c2deb" Text="[dateOfBirth.ToString]" Version="V3">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable BrowserURL="https://excelcult.com/hr-on-boarding-process-form/" CvType="InputBox" DesignTimeRectangle="668, 935, 290, 45" DesignTimeScaleFactor="1.5" ElementType="InputBox" FriendlyName="'INPUT dob'" FullSelectorArgument="&lt;webctrl id='dob' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='dob' tag='INPUT' type='text' class='' aaname='' /&gt;" Guid="a695ad4d-7aa8-42ed-9a0f-380af515bd56" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAASYAAAAxCAYAAAB3YARNAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAADKSURBVHhe7dSxCYAwAABB95/UwsYJImkCAft8cQe/wl8DIMaYgJw1pvt5Jel40zYmgJOMCcgxJiDHmIAcYwJyjAnIMSYgx5iAHGMCcowJyDEmIMeYgBxjAnKMCcgxJiDHmIAcYwJyjAnIMSYgx5iAHGMCcowJyDEmIMeYgBxjAnKMCcgxJiDHmIAcYwJyjAnIMSYgx5iAHGMCcowJyDEmIMeYgBxjAnKMCcgxJiDHmIAcYwJyjAnIMSYg53dMknS6aY0JoMKYgJgxPvMPsdqMF6IMAAAAAElFTkSuQmCC" InformativeScreenshot="bf90770e07aae5b4c42788029c4020c2.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='HR On-Boarding Process Form - ExcelCult' /&gt;" SearchSteps="FuzzySelector, Image, CV" Version="V2" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
@@ -223,8 +274,13 @@
                   </uix:TargetAnchorable.Anchors>
                 </uix:TargetAnchorable>
               </uix:NTypeInto.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
             </uix:NTypeInto>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Designation*'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="501.3333333333333,222.66666666666666" sap2010:WorkflowViewState.IdRef="NTypeInto_4" ScopeIdentifier="7d399e36-7b4f-400d-b529-3910685c2deb" Text="[designation]" Version="V3">
+            <uix:NTypeInto ActivateBefore="True" sap2010:Annotation.AnnotationText="The robot gets the Designation from variable designation and pastes it onto the portal" ClickBeforeMode="Single" DisplayName="Type Into 'Designation*'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="501.3333333333333,268" sap2010:WorkflowViewState.IdRef="NTypeInto_4" ScopeIdentifier="7d399e36-7b4f-400d-b529-3910685c2deb" Text="[designation]" Version="V3">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable BrowserURL="https://excelcult.com/hr-on-boarding-process-form/" CvType="InputBox" DesignTimeRectangle="1152, 485, 290, 45" DesignTimeScaleFactor="1.5" ElementType="InputBox" FriendlyName="'INPUT designation'" FullSelectorArgument="&lt;webctrl id='designation' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='designation' tag='INPUT' type='text' class='' aaname='' /&gt;" Guid="3fddf299-49be-4349-94a2-f0a2c138aeec" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAASYAAAAxCAYAAAB3YARNAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAADKSURBVHhe7dShDYAwAABB9p8UgWGCotqkAt0Xd8mv8NcAiDEmIGeN6X5eSTratI0J4BRjAnKMCcgxJiDHmIAcYwJyjAnIMSYgx5iAHGMCcowJyDEmIMeYgBxjAnKMCcgxJiDHmIAcYwJyjAnIMSYgx5iAHGMCcowJyDEmIMeYgBxjAnKMCcgxJiDHmIAcYwJyjAnIMSYgx5iAHGMCcowJyDEmIMeYgBxjAnKMCcgxJiDHmIAcYwJyjAnI+R2TJJ1sWmMCqDAmIGaMDxnwsko9ZiIXAAAAAElFTkSuQmCC" InformativeScreenshot="bbf19f6fd592b0cbce1e9393cb51168d.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='HR On-Boarding Process Form - ExcelCult' /&gt;" SearchSteps="FuzzySelector, Image, CV" Version="V2" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
@@ -234,8 +290,13 @@
                   </uix:TargetAnchorable.Anchors>
                 </uix:TargetAnchorable>
               </uix:NTypeInto.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
             </uix:NTypeInto>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Mobile Number*'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="501.3333333333333,222.66666666666666" sap2010:WorkflowViewState.IdRef="NTypeInto_5" ScopeIdentifier="7d399e36-7b4f-400d-b529-3910685c2deb" Text="[mobileNumber.ToString]" Version="V3">
+            <uix:NTypeInto ActivateBefore="True" sap2010:Annotation.AnnotationText="The robot gets the mobile number from variable mobileNumber and pastes it onto the portal" ClickBeforeMode="Single" DisplayName="Type Into 'Mobile Number*'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="501.3333333333333,268" sap2010:WorkflowViewState.IdRef="NTypeInto_5" ScopeIdentifier="7d399e36-7b4f-400d-b529-3910685c2deb" Text="[mobileNumber.ToString]" Version="V3">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable BrowserURL="https://excelcult.com/hr-on-boarding-process-form/" CvType="InputBox" DesignTimeRectangle="668, 548, 290, 45" DesignTimeScaleFactor="1.5" ElementType="InputBox" FriendlyName="'INPUT mobile'" FullSelectorArgument="&lt;webctrl id='mobile' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='mobile' tag='INPUT' type='text' class='' aaname='' /&gt;" Guid="713252a8-cb86-423d-ab45-c4192b967e44" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAASYAAAAxCAYAAAB3YARNAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAADKSURBVHhe7dSxCYAwAABB95/UwsYJImkCAft8cQe/wl8DIMaYgJw1pvt5Jel40zYmgJOMCcgxJiDHmIAcYwJyjAnIMSYgx5iAHGMCcowJyDEmIMeYgBxjAnKMCcgxJiDHmIAcYwJyjAnIMSYgx5iAHGMCcowJyDEmIMeYgBxjAnKMCcgxJiDHmIAcYwJyjAnIMSYgx5iAHGMCcowJyDEmIMeYgBxjAnKMCcgxJiDHmIAcYwJyjAnI+R2TJJ1uWmMCqDAmIMeYgJgxPkCmskqC7oB+AAAAAElFTkSuQmCC" InformativeScreenshot="7ef2d631fbd56f9991854bbdae17052c.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='HR On-Boarding Process Form - ExcelCult' /&gt;" SearchSteps="FuzzySelector, Image, CV" Version="V2" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
@@ -245,19 +306,25 @@
                   </uix:TargetAnchorable.Anchors>
                 </uix:TargetAnchorable>
               </uix:NTypeInto.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
             </uix:NTypeInto>
-            <ui:IfElseIf DisplayName="Else If" sap:VirtualizedContainerService.HintSize="501.3333333333333,1575.3333333333333" sap2010:WorkflowViewState.IdRef="IfElseIf_1">
+            <ui:IfElseIf sap2010:Annotation.AnnotationText="Used to make a selection of gender between male and female" DisplayName="Else If" sap:VirtualizedContainerService.HintSize="501.3333333333333,1851.3333333333333" sap2010:WorkflowViewState.IdRef="IfElseIf_1">
               <ui:IfElseIf.ConditionBlocks>
                 <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
                   <ui:IfElseIfBlock BlockType="If" Condition="[gender=&quot;Male&quot;]">
                     <ui:IfElseIfBlock.Then>
-                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="450,668.6666666666666" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                      <Sequence sap2010:Annotation.AnnotationText="Follows the process related to male gender" DisplayName="Body" sap:VirtualizedContainerService.HintSize="450,791.3333333333334" sap2010:WorkflowViewState.IdRef="Sequence_9">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'unchecked'" sap:VirtualizedContainerService.HintSize="388,159.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="7d399e36-7b4f-400d-b529-3910685c2deb" Version="V3">
+                        <uix:NClick ActivateBefore="True" sap2010:Annotation.AnnotationText="Make a selection of the male gender" ClickType="Single" DisplayName="Click 'unchecked'" sap:VirtualizedContainerService.HintSize="388,190" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="7d399e36-7b4f-400d-b529-3910685c2deb" Version="V3">
                           <uix:NClick.Target>
                             <uix:TargetAnchorable BrowserURL="https://excelcult.com/hr-on-boarding-process-form/" CvType="RadioButton" DesignTimeRectangle="1143, 561, 20, 20" DesignTimeScaleFactor="1.5" ElementType="RadioButton" FriendlyName="'INPUT male'" FullSelectorArgument="&lt;webctrl id='male' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='male' tag='INPUT' type='radio' class='' aaname='Male' /&gt;" Guid="c147dc62-7d79-471a-9291-75d10a301608" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAEiSURBVEhL7ZUhj4QwEIXvVwMJOEJQQIJAIEDgCAaBIcEjUSswJASDQCAIuHeZbndDb5ccJNc7c5/rdJo3fTOUD0jm7wXqukYURTBNE6qqQtd1uK6LPM/R9z3POuZQoGka2LYNRVHgOA6yLENZliiKAnEcQ9M0tpemKbZt46deeStQVRU7HAQB2rblUZF1XZkg5Xmeh2ma+I7IiwBZQoeo4jNQAYZhwPd9HhERBOZ5Zh6TBVe43W6sKLLvK4IAJVDiOI48ch66MQ3Bsiw8ckcQoKYmScJX1xiGgRVHFu95ClCT3iVcwbIsNlV7ngJd1zGBo6k5A01dGIZ8def3BKRbREhtMiF9TKV/aITUp+KB1MfugdTneg9ZJuWH81P8C3wD8Ank4nqrhY/qjQAAAABJRU5ErkJggg==" InformativeScreenshot="97507fbb03944ed65b5bae55cc072318.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='HR On-Boarding Process Form - ExcelCult' /&gt;" SearchSteps="FuzzySelector, Image, CV" Version="V2" Visibility="Interactive">
                               <uix:TargetAnchorable.Anchors>
@@ -268,8 +335,13 @@
                               </uix:TargetAnchorable.Anchors>
                             </uix:TargetAnchorable>
                           </uix:NClick.Target>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
                         </uix:NClick>
-                        <uix:NClick ActivateBefore="True" ClickType="Single" ContinueOnError="False" DelayAfter="2" DelayBefore="2" DisplayName="Click 'I accept'" sap:VirtualizedContainerService.HintSize="388,159.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_6" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="7d399e36-7b4f-400d-b529-3910685c2deb" Version="V3">
+                        <uix:NClick ActivateBefore="True" sap2010:Annotation.AnnotationText="Click the button to accept the terms and conditions" ClickType="Single" ContinueOnError="False" DelayAfter="2" DelayBefore="2" DisplayName="Click 'I accept'" sap:VirtualizedContainerService.HintSize="388,190" sap2010:WorkflowViewState.IdRef="NClick_6" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="7d399e36-7b4f-400d-b529-3910685c2deb" Version="V3">
                           <uix:NClick.Target>
                             <uix:TargetAnchorable BrowserURL="https://excelcult.com/hr-on-boarding-process-form/" CvType="CheckBox" DesignTimeRectangle="475, 734, 20, 20" DesignTimeScaleFactor="1.5" ElementType="CheckBox" FriendlyName="'Checkbox'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='checkbox' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='checkbox' class='' aaname='' /&gt;" Guid="658afc5e-3bb9-47bf-b8ac-2c0efcdbc9c8" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAACSSURBVEhL7ZTBCcAgDEU7tW7h0V3EPdxGUh6UQEUwCDm0+MCL5Ocll1zizM8ErTXJOUuMUUIIpkctGbIzVEABgZSSlFKk1mp61JIhO5OogCko7L0/P3bIkKXHiApYlWl2IUuPERWwIivvQpYeI0egHMGSI1iyFLifCvdj536ugQKmYFUClkctmVlzeAk8+LpA5AYDNGVFp65+CgAAAABJRU5ErkJggg==" InformativeScreenshot="3659f2f88b181007793c8e78d110f718.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='HR On-Boarding Process Form - ExcelCult' /&gt;" SearchSteps="FuzzySelector, Image, CV" Version="V2" Visibility="Interactive">
                               <uix:TargetAnchorable.Anchors>
@@ -279,24 +351,35 @@
                               </uix:TargetAnchorable.Anchors>
                             </uix:TargetAnchorable>
                           </uix:NClick.Target>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
                         </uix:NClick>
-                        <uix:NClick ActivateBefore="True" ClickType="Single" DelayAfter="2" DelayBefore="2" DisplayName="Click 'Submit'" sap:VirtualizedContainerService.HintSize="388,159.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_7" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="7d399e36-7b4f-400d-b529-3910685c2deb" Version="V3">
+                        <uix:NClick ActivateBefore="True" sap2010:Annotation.AnnotationText="Click to submit the fully filled form" ClickType="Single" DelayAfter="2" DelayBefore="2" DisplayName="Click 'Submit'" sap:VirtualizedContainerService.HintSize="388,190" sap2010:WorkflowViewState.IdRef="NClick_7" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="7d399e36-7b4f-400d-b529-3910685c2deb" Version="V3">
                           <uix:NClick.Target>
                             <uix:TargetAnchorable BrowserURL="https://excelcult.com/hr-on-boarding-process-form/" CvElementArea="454, 864, 1011, 68" CvTextArea="908, 890, 97, 19" CvTextArgument="SUBMIT" CvType="Button" DesignTimeRectangle="456, 503, 1005, 64" DesignTimeScaleFactor="1.5" ElementType="Button" FriendlyName="'Submit'" FullSelectorArgument="&lt;webctrl aaname='Submit' tag='BUTTON' type='submit' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Submit' tag='BUTTON' type='submit' class='' check:innerText='SUBMIT' /&gt;" Guid="504487ce-f142-44f7-8bcc-6461fccb961d" ImageBase64="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" InformativeScreenshot="8cb4261f6b4beded4f2bb604c0b439f4.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='HR On-Boarding Process Form - ExcelCult' /&gt;" SearchSteps="Selector, FuzzySelector, Image, CV" Version="V2" Visibility="Interactive" />
                           </uix:NClick.Target>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
                         </uix:NClick>
                       </Sequence>
                     </ui:IfElseIfBlock.Then>
                   </ui:IfElseIfBlock>
                   <ui:IfElseIfBlock BlockType="Else">
                     <ui:IfElseIfBlock.Then>
-                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="450,668.6666666666666" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                      <Sequence sap2010:Annotation.AnnotationText="Follows process related to female gender" DisplayName="Body" sap:VirtualizedContainerService.HintSize="450,791.3333333333334" sap2010:WorkflowViewState.IdRef="Sequence_10">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'unchecked'" sap:VirtualizedContainerService.HintSize="388,159.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="7d399e36-7b4f-400d-b529-3910685c2deb" Version="V3">
+                        <uix:NClick ActivateBefore="True" sap2010:Annotation.AnnotationText="Make a selection of female gender" ClickType="Single" DisplayName="Click 'unchecked'" sap:VirtualizedContainerService.HintSize="388,190" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="7d399e36-7b4f-400d-b529-3910685c2deb" Version="V3">
                           <uix:NClick.Target>
                             <uix:TargetAnchorable BrowserURL="https://excelcult.com/hr-on-boarding-process-form/" DesignTimeRectangle="1227, 531, 20, 20" DesignTimeScaleFactor="1.5" ElementType="RadioButton" FriendlyName="'INPUT female'" FullSelectorArgument="&lt;webctrl id='female' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='female' tag='INPUT' type='radio' class='' aaname='Female' /&gt;" Guid="ccec822a-3961-4f7b-a59b-6d6981b319f6" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAEJSURBVEhL7dTNbYRADIbhVI24c6EADlQALdADZzqgADpw9KwWlOVnskKZ5JJXGmnksf3ZxrsfkZm/FZimKfq+j7quoyzLx3Fn8/YOpwLzPEfbtlEURVRVFV3XxTAMj+PO5o0P3xQHAZWpVJJxHJ/WI9748E118yKgGgFN08SyLE/rNXz4irnq5EVAy6p6J/kKXzFiz9gEtGmuqbFcIUbs2ag2AZuhkruIlWPPJmD9bMhdxMqxZxPwoazhXcTKsef3BLKPKPtHzr6myPpDQ/a/CmhTgKpS4/LGh+/ZaFYOAlCNls1VEhtiDR13Nm98ripfORVYUZnNsH4qddzZUlV/JSnwE/wLfEPEJ2/QekU0b6l3AAAAAElFTkSuQmCC" InformativeScreenshot="2b15d394f1727d1e56cd8ebbe121aff4.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='HR On-Boarding Process Form - ExcelCult' /&gt;" SearchSteps="FuzzySelector, Image" Version="V2" Visibility="Interactive">
                               <uix:TargetAnchorable.Anchors>
@@ -306,8 +389,13 @@
                               </uix:TargetAnchorable.Anchors>
                             </uix:TargetAnchorable>
                           </uix:NClick.Target>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
                         </uix:NClick>
-                        <uix:NClick ActivateBefore="True" ClickType="Single" ContinueOnError="False" DelayAfter="2" DelayBefore="2" DisplayName="Click 'I accept'" sap:VirtualizedContainerService.HintSize="388,159.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="7d399e36-7b4f-400d-b529-3910685c2deb" Version="V3">
+                        <uix:NClick ActivateBefore="True" sap2010:Annotation.AnnotationText="Click the button to accept terms and consitions" ClickType="Single" ContinueOnError="False" DelayAfter="2" DelayBefore="2" DisplayName="Click 'I accept'" sap:VirtualizedContainerService.HintSize="388,190" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="7d399e36-7b4f-400d-b529-3910685c2deb" Version="V3">
                           <uix:NClick.Target>
                             <uix:TargetAnchorable BrowserURL="https://excelcult.com/hr-on-boarding-process-form/" CvType="CheckBox" DesignTimeRectangle="475, 734, 20, 20" DesignTimeScaleFactor="1.5" ElementType="CheckBox" FriendlyName="'Checkbox'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='checkbox' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='checkbox' class='' aaname='' /&gt;" Guid="658afc5e-3bb9-47bf-b8ac-2c0efcdbc9c8" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAACSSURBVEhL7ZTBCcAgDEU7tW7h0V3EPdxGUh6UQEUwCDm0+MCL5Ocll1zizM8ErTXJOUuMUUIIpkctGbIzVEABgZSSlFKk1mp61JIhO5OogCko7L0/P3bIkKXHiApYlWl2IUuPERWwIivvQpYeI0egHMGSI1iyFLifCvdj536ugQKmYFUClkctmVlzeAk8+LpA5AYDNGVFp65+CgAAAABJRU5ErkJggg==" InformativeScreenshot="3659f2f88b181007793c8e78d110f718.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='HR On-Boarding Process Form - ExcelCult' /&gt;" SearchSteps="FuzzySelector, Image, CV" Version="V2" Visibility="Interactive">
                               <uix:TargetAnchorable.Anchors>
@@ -317,19 +405,34 @@
                               </uix:TargetAnchorable.Anchors>
                             </uix:TargetAnchorable>
                           </uix:NClick.Target>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
                         </uix:NClick>
-                        <uix:NClick ActivateBefore="True" ClickType="Single" DelayAfter="2" DelayBefore="2" DisplayName="Click 'Submit'" sap:VirtualizedContainerService.HintSize="388,159.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="7d399e36-7b4f-400d-b529-3910685c2deb" Version="V3">
+                        <uix:NClick ActivateBefore="True" sap2010:Annotation.AnnotationText="Submit the fully completed form" ClickType="Single" DelayAfter="2" DelayBefore="2" DisplayName="Click 'Submit'" sap:VirtualizedContainerService.HintSize="388,190" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="7d399e36-7b4f-400d-b529-3910685c2deb" Version="V3">
                           <uix:NClick.Target>
                             <uix:TargetAnchorable BrowserURL="https://excelcult.com/hr-on-boarding-process-form/" CvElementArea="454, 864, 1011, 68" CvTextArea="908, 890, 97, 19" CvTextArgument="SUBMIT" CvType="Button" DesignTimeRectangle="456, 503, 1005, 64" DesignTimeScaleFactor="1.5" ElementType="Button" FriendlyName="'Submit'" FullSelectorArgument="&lt;webctrl aaname='Submit' tag='BUTTON' type='submit' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Submit' tag='BUTTON' type='submit' class='' check:innerText='SUBMIT' /&gt;" Guid="504487ce-f142-44f7-8bcc-6461fccb961d" ImageBase64="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" InformativeScreenshot="8cb4261f6b4beded4f2bb604c0b439f4.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='HR On-Boarding Process Form - ExcelCult' /&gt;" SearchSteps="Selector, FuzzySelector, Image, CV" Version="V2" Visibility="Interactive" />
                           </uix:NClick.Target>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
                         </uix:NClick>
                       </Sequence>
                     </ui:IfElseIfBlock.Then>
                   </ui:IfElseIfBlock>
                 </sc:BindingList>
               </ui:IfElseIf.ConditionBlocks>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
             </ui:IfElseIf>
-            <uix:NGetText DisplayName="Get Text 'Employee Id*'" sap:VirtualizedContainerService.HintSize="501.3333333333333,159.33333333333334" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="7d399e36-7b4f-400d-b529-3910685c2deb" TextString="[employeeID]" Version="V3">
+            <uix:NGetText sap2010:Annotation.AnnotationText="Extract employee ID from the portal and save it to employeeID variable" DisplayName="Get Text 'Employee Id*'" sap:VirtualizedContainerService.HintSize="501.3333333333333,204.66666666666666" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="7d399e36-7b4f-400d-b529-3910685c2deb" TextString="[employeeID]" Version="V3">
               <uix:NGetText.Target>
                 <uix:TargetAnchorable BrowserURL="https://excelcult.com/hr-on-boarding-process-form/" CvType="InputBox" DesignTimeRectangle="668, 293, 290, 45" DesignTimeScaleFactor="1.5" ElementType="InputBox" FriendlyName="'1012'" FullSelectorArgument="&lt;webctrl id='EmployeeId' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='EmployeeId' tag='INPUT' type='text' class='' aaname='' /&gt;" Guid="672fd9e1-ac6d-4897-b1ed-5597261eae49" InformativeScreenshot="2f60e0e6aef940717513adffcd767be9.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='HR On-Boarding Process Form - ExcelCult' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
@@ -339,8 +442,13 @@
                   </uix:TargetAnchorable.Anchors>
                 </uix:TargetAnchorable>
               </uix:NGetText.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
             </uix:NGetText>
-            <uix:NGetText DisplayName="Get Text 'Official Mail Id*'" sap:VirtualizedContainerService.HintSize="501.3333333333333,159.33333333333334" sap2010:WorkflowViewState.IdRef="NGetText_2" ScopeIdentifier="7d399e36-7b4f-400d-b529-3910685c2deb" TextString="[officialEmailID]" Version="V3">
+            <uix:NGetText sap2010:Annotation.AnnotationText="Extract official email ID from the portal and save it to the officialEmailID variable" DisplayName="Get Text 'Official Mail Id*'" sap:VirtualizedContainerService.HintSize="501.3333333333333,204.66666666666666" sap2010:WorkflowViewState.IdRef="NGetText_2" ScopeIdentifier="7d399e36-7b4f-400d-b529-3910685c2deb" TextString="[officialEmailID]" Version="V3">
               <uix:NGetText.Target>
                 <uix:TargetAnchorable BrowserURL="https://excelcult.com/hr-on-boarding-process-form/" CvElementArea="1146, 290, 299, 50" CvTextArea="1155, 303, 283, 24" CvTextArgument="Laurah.Mbanda@excelcult.co" CvType="InputBox" DesignTimeRectangle="1152, 293, 290, 45" DesignTimeScaleFactor="1.5" ElementType="InputBox" FriendlyName="'Laurah.Mbanda@excelcult…'" FullSelectorArgument="&lt;webctrl id='EmployeeEmail' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='EmployeeEmail' tag='INPUT' type='text' class='' aaname='' /&gt;" Guid="2fdb29d8-1dd2-4219-abdb-0384a3afb7e6" InformativeScreenshot="b1c593bcffe25bdc28847012f42b2e6b.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='HR On-Boarding Process Form - ExcelCult' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
@@ -350,24 +458,71 @@
                   </uix:TargetAnchorable.Anchors>
                 </uix:TargetAnchorable>
               </uix:NGetText.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
             </uix:NGetText>
-            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="501.3333333333333,147.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_10" Message="[employeeID]" />
-            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="501.3333333333333,147.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_9" Message="[officialEmailID]" />
-            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="501.3333333333333,147.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_7" Message="[&quot;Some data has been filled onto the portal. Pending gender, accepting T&amp;C and submittion&quot;]" />
+            <ui:LogMessage sap2010:Annotation.AnnotationText="To track that employer ID has been captured in the variable" DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="501.3333333333333,192.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_10" Message="[employeeID]">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:LogMessage>
+            <ui:LogMessage sap2010:Annotation.AnnotationText="To track if email ID has been captured into the variable" DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="501.3333333333333,178" sap2010:WorkflowViewState.IdRef="LogMessage_9" Message="[officialEmailID]">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:LogMessage>
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="501.3333333333333,54" sap2010:WorkflowViewState.IdRef="CommentOut_5">
+              <ui:CommentOut.Body>
+                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,288.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:LogMessage sap2010:Annotation.AnnotationText="To track that data has been captured into the variables" DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="388,178" sap2010:WorkflowViewState.IdRef="LogMessage_7" Message="[&quot;Some data has been filled onto the portal. Pending gender, accepting T&amp;C and submittion&quot;]">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:LogMessage>
+                </Sequence>
+              </ui:CommentOut.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:CommentOut>
           </Sequence>
         </ActivityAction>
       </uix:NApplicationCard.Body>
       <uix:NApplicationCard.TargetApp>
         <uix:TargetApp Area="1912, -8, 1296, 1000" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAN7SURBVFhHxdZfSFNxFAfwOStKl2aJZjZKzUgcWam7d+slovAhC8tqD5X5kIYV6y8FViRE2R+K/mERJZYEUUR/Kcr0Tsv+URBRPpUviQQJkZD/Ur+d33WzeXd2t5XUhQ9sZ+d3zrl3270/Q86W3P+KDQYLtfYUKLZp3GfBYoOB4L4U1eeSDsIld6gUWzleSFFcbiBs0B/AEAZFXktNWwg0WnoVuRBlBiO31h82yIHLakO9/IJprPUS9TY7V4PDBr3hYba5T5Gr+11SH9PMDzW3GvXZZq6mNzYo4E5mBF3u3VSofWhxGf2KjK4aK/rd77trJPTVSUNy3Nqpxh68zozgeghsEC57Np3FJ6agSgzQemMOnlek4815Cz5fn4OeWnYAFQ3aLGpyvXwCAi0q0RbREkM48ydi1YJY9QpwORolXC+fgCCSNYt9NJ5JR5jBAAO5sDOZzdEY3gFuHZiuNhcOFpnZHI2/G4D+CXhXORMVW5PUyx4XM3JwANMYI3Jt41BebMaT0+n0lViHrHULfQDRtOZYGgpyqOG43w0DiRxtxBJ7DK7uS0XP48HfR2gD9NLfajEV4RqMHmXEgXVTsN2RgB2OSTi+KQXRpnA2V0ozoeOhekVCG6DzkRUJ433POjoyHA+OzAA+ngQ6vwDdbUDrXbw6Z0HCBN/88VEj8O1e1p99BU2XMrBuURzmWsZi3qwobFwar8bEZ9tWJmBvYTL2F02Dc3kiftBZivtB6epE+j3EYGFWNDbkxeND1UD+Hw2gp7ZiPk44U1G+PglXymbTjWgum+dleAdAWyPQRZe/6yvQ0QI8XcDn/Ta8A7yvmonDJSk4uTkNby8OXmY9IQzQYMujBT81BYYQt+LKXck45ZyKnzrPAZUi98JlW8r18gl49NRZM+iBVMsWDE0dqBbXQ2CDHuoOqEHKpyIfNUWDQE9TRVouanC1Pdiglro3cMml9Fj12RswxB5gt94ewBsb9AfPbIl0Zpdpa+a7OxqIVdNZT+bW+sMGA+lRJJkGeeY1wHNqLHO5gbDBYABlRhpiDW1AC3BtRTiXEww2qIeOVFLjVkUs5Kb7vYNbo4cN6qHDSsSD5iwpJIdIs/u1hVujhw3qocMzQBPJJ0fJUy43GGxQDx2eAe6RM2QP+U5uk2XcGj1sUA8dsaTYzUFMZLX7vd87nj9s8N/JNfwClv+GPQkjCbMAAAAASUVORK5CYII=" InformativeScreenshot="e0fb7316bacb9a54c66b2604e7df1c23.jpg" Selector="&lt;html app='chrome.exe' title='HR On-Boarding Process Form - ExcelCult' /&gt;" Title="HR On-Boarding Process Form - ExcelCult" Url="https://excelcult.com/hr-on-boarding-process-form/" />
       </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
     </uix:NApplicationCard>
-    <uix:NApplicationCard sap2010:Annotation.AnnotationText="Activities to be carried out on the notepad" AttachMode="ByInstance" DisplayName="Use Application: Untitled - Notepad" sap:VirtualizedContainerService.HintSize="597.3333333333334,2481.3333333333335" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" ScopeGuid="485e17f6-653b-46a7-bd8f-7e41121e41b4" Version="V2">
+    <uix:NApplicationCard sap2010:Annotation.AnnotationText="Activities to be carried out on the notepad" AttachMode="ByInstance" DisplayName="Use Application: Untitled - Notepad" sap:VirtualizedContainerService.HintSize="597.3333333333334,2402.6666666666665" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" ScopeGuid="485e17f6-653b-46a7-bd8f-7e41121e41b4" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,2153.3333333333335" sap2010:WorkflowViewState.IdRef="Sequence_11">
+          <Sequence sap2010:Annotation.AnnotationText="Activities related to the Notepad application" DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,2074.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_11">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="fullName">
                 <Variable.Default>
@@ -378,9 +533,10 @@
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:SetToClipboard sap2010:Annotation.AnnotationText="Send the Staff ID to the Clipboard" DisplayName="Set To Clipboard" sap:VirtualizedContainerService.HintSize="388,90.66666666666667" sap2010:WorkflowViewState.IdRef="SetToClipboard_1" Text="[&quot;Staff ID: &quot;+employeeID.ToString]">
+            <ui:SetToClipboard sap2010:Annotation.AnnotationText="Send the Staff ID to the Clipboard from the employeeID variable" DisplayName="Set To Clipboard" sap:VirtualizedContainerService.HintSize="388,105.33333333333333" sap2010:WorkflowViewState.IdRef="SetToClipboard_1" Text="[&quot;Staff ID: &quot;+employeeID.ToString]">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -421,7 +577,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:SendHotkey>
-            <ui:SetToClipboard sap2010:Annotation.AnnotationText="Send the official email of the staff to the Clipboard" DisplayName="Set To Clipboard" sap:VirtualizedContainerService.HintSize="388,90.66666666666667" sap2010:WorkflowViewState.IdRef="SetToClipboard_2" Text="[&quot;Staff Email: &quot;+officialEmailID]">
+            <ui:SetToClipboard sap2010:Annotation.AnnotationText="Send the official email of the staff from the officialEmailID variable to the Clipboard" DisplayName="Set To Clipboard" sap:VirtualizedContainerService.HintSize="388,105.33333333333333" sap2010:WorkflowViewState.IdRef="SetToClipboard_2" Text="[&quot;Staff Email: &quot;+officialEmailID]">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -445,7 +601,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:SendHotkey>
-            <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" sap2010:Annotation.AnnotationText="Carraige Return to push cursor to new line" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="388,170" sap2010:WorkflowViewState.IdRef="SendHotkey_4" Key="enter" KeyModifiers="None" SpecialKey="True">
+            <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" sap2010:Annotation.AnnotationText="Carraige Return to push the cursor to a new line" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="388,170" sap2010:WorkflowViewState.IdRef="SendHotkey_4" Key="enter" KeyModifiers="None" SpecialKey="True">
               <ui:SendHotkey.Target>
                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="4aae43c6-1202-404a-98b6-a670c8cafad4">
                   <ui:Target.TimeoutMS>
@@ -479,13 +635,30 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:SendHotkey>
-            <ui:LogMessage sap2010:Annotation.AnnotationText="To track the the full name has been correctly captured in variable fullName" DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="388,192.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_11" Message="[fullName]">
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="388,54" sap2010:WorkflowViewState.IdRef="CommentOut_6">
+              <ui:CommentOut.Body>
+                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,303.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:LogMessage sap2010:Annotation.AnnotationText="To track the the full name has been correctly captured in variable fullName" DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="388,192.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_11" Message="[fullName]">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:LogMessage>
+                </Sequence>
+              </ui:CommentOut.Body>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-            </ui:LogMessage>
+            </ui:CommentOut>
             <ui:SetToClipboard sap2010:Annotation.AnnotationText="Copy the full name of employee to the clipbaord from variable fullName" DisplayName="Set to Clipboard" sap:VirtualizedContainerService.HintSize="388,105.33333333333333" sap2010:WorkflowViewState.IdRef="SetToClipboard_3" Text="[fullName]">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -493,7 +666,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:SetToClipboard>
-            <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SpecialKey="{x:Null}" Activate="True" sap2010:Annotation.AnnotationText="Save file as full name of staff" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="388,170" sap2010:WorkflowViewState.IdRef="SendHotkey_8" Key="v" KeyModifiers="Ctrl">
+            <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SpecialKey="{x:Null}" Activate="True" sap2010:Annotation.AnnotationText="Save file as full name of staff from the clipboard" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="388,170" sap2010:WorkflowViewState.IdRef="SendHotkey_8" Key="v" KeyModifiers="Ctrl">
               <ui:SendHotkey.Target>
                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="52e4a93d-2bdd-4be6-bd91-86684d46ceac">
                   <ui:Target.TimeoutMS>
@@ -510,7 +683,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:SendHotkey>
-            <ui:Click AlterIfDisabled="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" sap2010:Annotation.AnnotationText="Saves the notepad file" ClickType="CLICK_SINGLE" ContinueOnError="False" DelayBefore="2" DelayMS="2" DisplayName="Click 'Edit'" sap:VirtualizedContainerService.HintSize="388,138" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT">
+            <ui:Click AlterIfDisabled="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" sap2010:Annotation.AnnotationText="Saves the notepad file with staff details" ClickType="CLICK_SINGLE" ContinueOnError="False" DelayBefore="2" DelayMS="2" DisplayName="Click 'Edit'" sap:VirtualizedContainerService.HintSize="388,138" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT">
               <ui:Click.CursorPosition>
                 <ui:CursorPosition Position="Center">
                   <ui:CursorPosition.OffsetX>
